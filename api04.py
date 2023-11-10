@@ -60,11 +60,6 @@ def get_one(id):  # Função que lê um item específico, identificado pelo índ
         return False  # Retorna para o chamador com "False" .
 
 
-def new(json_data):
-    print(json_data)
-    return
-
-
 def get_data():
 
     # Recebe uma entrada pelo teclado e armazena em 'input_id'.
@@ -89,11 +84,22 @@ def get_data():
 
 # get_data()
 
+
+def new(json_data):
+    # print('new → ', json_data)
+    
+    next_id = max(item["id"] for item in items) + 1
+    print('max → ', next_id)
+    return
+
+
+# JSON a ser gravado na coleção
 my_json = '''
 {
-        "id": 6,
-        "name": "Bugiganga",
-        "description": "Uma bugiganda inútil",
-        "location": "Na sala de bugigangas"
-    }
+    "name": "Gongolo",
+    "description": "Um piolho e cobra",
+    "location": "No jardim"
+}
 '''
+
+new(my_json)
