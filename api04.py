@@ -25,14 +25,14 @@ items = [
         "location": "Na caixa de trecos"
     }, {
         "id": 5,
-        "name": "Trambolho",
-        "description": "Um trabolho velho",
-        "location": "No armario de trambolhos"
+        "name": "valverde",
+        "description": "logo ali",
+        "location": "fim do mundo"
     }, {
         "id": 6,
-        "name": "Bugiganga",
-        "description": "Uma bugiganda inútil",
-        "location": "Na sala de bugigangas"
+        "name": "payet",
+        "description": "jogador caro",
+        "location": "fazendo gol"
     }
 ]
 
