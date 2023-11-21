@@ -50,10 +50,14 @@ def get_all():
     except Exception as error:
         return {"error": f"Erro inesperado: {str(error)}"}
 
+
 @app.route("/items/<id>", methods=["GET"])
-def get_all(id):
+def get_one(id):
+    print(f"O ID é {id}")
+    return {"Olá": "mundo"}
 
 
 # Roda aplicativo Flask.
 if __name__ == "__main__":
     app.run(debug=True)
+
