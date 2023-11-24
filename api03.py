@@ -34,4 +34,4 @@ def get_one(id):# função que lê um item especifico, identificado pelo indice.
 
 
 # chama a função get_one(), passando o indice como parâmetro.
-print(get_one(3))
+print(get_one(1))

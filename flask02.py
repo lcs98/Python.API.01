@@ -13,22 +13,21 @@ json.provider.DefaultJSONProvider.ensure_ascii = False
 # Especifica a base de dados SQLite3.
 database = "./db/temp_db.db"
 
-# Obtém todos os registros válidos de 'item'.
+# Obtém todos os registros válidos de 'owner'.
 # Request method → GET
-# Request endpoint → /items
+# Request endpoint → /owners
 # Response → JSON
 
-
-@app.route("/items", methods=["GET"])
-def get_all():
+@app.route("/owners", methods=["GET"])
+def get_all_owners():
     try:
         # Conectar ao banco de dados SQLite.
         conn = sqlite3.connect(database)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
 
-        # Consulta SQL para selecionar todos os itens ativos.
-        sql = "SELECT * FROM item WHERE item_status != 'off'"
+        # Consulta SQL para selecionar todos os proprietários ativos.
+        sql = "SELECT * FROM owner WHERE owner_status != 'off' ORDER BY name"
         cursor.execute(sql)
         rows_data = cursor.fetchall()
         conn.close()
@@ -38,11 +37,11 @@ def get_all():
         for row_data in rows_data:
             list_data.append(dict(row_data))
 
-        # Retornar os dados ou um erro se nenhum item for encontrado.
+        # Retornar os dados ou um erro se nenhum proprietário for encontrado.
         if list_data:
             return list_data
         else:
-            return {"error": "Nenhum item encontrado"}
+            return {"error": "Nenhum proprietário encontrado"}
 
     # Tratamento de exceções.
     except sqlite3.Error as error:
@@ -50,9 +49,8 @@ def get_all():
     except Exception as error:
         return {"error": f"Erro inesperado: {str(error)}"}
 
-@app.route("/items/<id>", methods=["GET"])
-def get_all(id):
-    
+@app.route("/owners", methods=["GET"])
+def get_all_owners():
 
 # Roda aplicativo Flask.
 if __name__ == "__main__":
