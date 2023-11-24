@@ -51,9 +51,7 @@ def get_all():
         return {"error": f"Erro inesperado: {str(error)}"}
 
 @app.route("/items/<id>", methods=["GET"])
-def get_all(id):
-    
-
+def get_all(id): 
 # Roda aplicativo Flask.
-if __name__ == "__main__":
+  if __name__ == "__main__":
     app.run(debug=True)

@@ -50,8 +50,8 @@ def get_all_owners():
         return {"error": f"Erro inesperado: {str(error)}"}
 
 @app.route("/owners", methods=["GET"])
-def get_all_owners():
 
+def get_all_owners(): 
 # Roda aplicativo Flask.
-if __name__ == "__main__":
+  if __name__ == "__main__":
     app.run(debug=True)
