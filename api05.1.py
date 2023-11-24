@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import json
-import os
 import sqlite3
+import os
 
 # Definição do caminho do banco de dados.
 database = './db/temp_db.db'

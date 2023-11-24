@@ -25,14 +25,14 @@ items = [
         "location": "Na caixa de trecos"
     }, {
         "id": 5,
-        "name": "valverde",
-        "description": "logo ali",
-        "location": "fim do mundo"
+        "name": "Trambolho",
+        "description": "Um trabolho velho",
+        "location": "No armario de trambolhos"
     }, {
         "id": 6,
-        "name": "payet",
-        "description": "jogador caro",
-        "location": "fazendo gol"
+        "name": "Bugiganga",
+        "description": "Uma bugiganda inútil",
+        "location": "Na sala de bugigangas"
     }
 ]
 
@@ -101,5 +101,4 @@ my_json = '''
     "location": "No jardim"
 }
 '''
-
 new(my_json)
