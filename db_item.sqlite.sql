@@ -36,13 +36,15 @@ CREATE TABLE item (
 	item_owner INTEGER,
 	item_status TEXT DEFAULT 'on',
 	item_field1 TEXT,
-	item_field2 TEXT
+	item_field2 TEXT,
+	FOREIGN KEY (item_owner) REFERENCES owner (owner_id)
 );
 
 -- Popula 'item' com dados 'fake' ' aleatórios.
 INSERT INTO item (item_date, item_name, item_description, item_location, item_owner)
 VALUES
-  ('2023-05-12 14:15:00', 'Produto1', 'Descrição do Produto 1', 'Localização 1', 1),
-  ('2023-06-21 23:24:25', 'Produto2', 'Descrição do Produto 2', 'Localização 2', 2),
-  ('2023-10-01 08:09:00', 'Produto3', 'Descrição do Produto 3', 'Localização 3', 3);
-
+	('2023-05-12 14:15:00', 'Produto1', 'Descrição do Produto 1', 'Localização 1', 1),
+	('2023-06-21 23:24:25', 'Produto2', 'Descrição do Produto 2', 'Localização 2', 2),
+	('2023-10-01 08:09:00', 'Produto3', 'Descrição do Produto 3', 'Localização 3', 3),
+	('2023-11-11 11:11:00', 'Produto4', 'Descrição do Produto 4', 'Localização 4', 6);
+  
